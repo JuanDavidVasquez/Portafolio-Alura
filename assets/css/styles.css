@@ -1,0 +1,183 @@
+
+html{
+    font-size: 62.5%;
+   /*  --main-color: #000; */
+    --header1: calc(2rem + 1vw);
+    --header2: calc(3.5rem + 1vw);
+    --header3: calc(3rem + 1vw);
+    --header4: calc(2.4rem + 1vw);
+    --text: calc(1.3rem + 1vw);
+    --big: calc(6rem + 1vw);
+    --special-color: #906272;
+    --background-color: #414141;
+    --gray-text: #525252;
+    scroll-behavior:smooth;
+    background: #eee;
+}
+body{
+    font-family: "Ruhl", sans-serif;
+    animation: opening 3s ease-in-out;
+    width: 90%;
+    margin: 0 auto;
+}
+h1{
+    font-size: var(--header1);
+    font-family: "Vibes", sans-serif;
+}
+li,button,label,input,p{
+    font-size: var(--text);
+    font-weight: 100;
+}
+h2{
+    text-align: center;
+    font-size: var(--header2);
+}
+h3{
+    font-size: var(--header3);
+    font-weight: normal;
+}
+h4,h5{
+    font-size: var(--header4);
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+button{
+    padding: 2rem 6rem;
+    background-color: #4c6e97;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background 0.5s ease-in-out 1s;
+    transition: all 1s ease;
+}
+button:hover{
+    background: #27394e;
+    font-size: 2.6rem;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Nav Section*/
+
+header{
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+nav{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    min-height: 10vh;
+    padding: 2rem 0rem;
+}
+.logo{
+    flex: 1 1 20rem;
+}
+.container-navs{
+    display: flex;
+    justify-content: space-around;
+    min-width: 50%;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    flex: 1 1 20rem;
+    font-size: 2rem;
+}
+.data{
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: repeat(3,1fr);
+    place-items: center;
+}
+.gracias{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    grid-column: 2/3;
+    grid-row: 1/4;
+}
+.data-data{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    padding: 5rem;
+}
+.data p{
+  
+}
+.data ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+}
+.data-data ul li img{
+    width: 20px;
+}
+/*
+    About
+*/
+
+.about{
+    background: #f2f2ff;
+    padding: 3rem;
+}
+.about p{
+    max-width: 70%;
+    text-align: justify;
+}
+.about h2{
+    text-align: start;
+}
+/*
+    Skills
+*/
+.skills{
+    padding: 2rem;
+}
+.container-cards{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.card{
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    display: grid;
+    align-items: end;
+    grid-template-rows: 70% 30%;
+    padding: 1rem;
+}
+.card span{
+    font-size: 2.2rem;
+}
+
+/*
+    Academico
+*/
+.formacion{
+    padding: 5rem;
+}
+.container-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card-formacion{
+    height: 150px;
+    flex-basis: 30rem;
+    background: #fff;
+}
