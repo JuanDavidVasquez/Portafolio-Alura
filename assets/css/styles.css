@@ -93,7 +93,7 @@ nav{
 .container-navs{
     display: flex;
     justify-content: space-around;
-    min-width: 50%;
+    min-width: 60%;
 }
 .nav-links{
     display: flex;
@@ -256,5 +256,9 @@ nav{
     }
     .card-formacion {
         gap: 1.5rem;
+    }
+    .card {
+        width: 150px;
+        height: 150px;
     }
 }
