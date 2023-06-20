@@ -149,6 +149,22 @@ function guessLetter() {
     Formulario
 */
 
-function enViarFormulario(){
+function enViarFormulario() {
+    // Obtener referencias a los elementos del formulario
+    var nameInput = document.getElementById('name');
+    var emailInput = document.getElementById('email');
+    var messageInput = document.getElementById('message');
 
-}
+    // Obtener los valores de los campos
+    var name = nameInput.value;
+    var email = emailInput.value;
+    var message = messageInput.value;
+
+    // Mostrar los datos en un modal
+    alert("Datos a enviar:\n\nNombre: " + name + "\nEmail: " + email + "\nMensaje: " + message);
+
+    // Limpiar los campos de entrada
+    nameInput.value = '';
+    emailInput.value = '';
+    messageInput.value = '';
+  }
