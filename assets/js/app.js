@@ -2,7 +2,6 @@
     Codigo Secreto
 */
 'use strict'
-alert("trest");
 function animar() {
   gsap.fromTo(
     "#resultado",
@@ -84,3 +83,63 @@ textarea.addEventListener("input", () => {
   const newValue = currentValue.replace(/[^a-zA-Z\s]/g, "");
   textarea.value = newValue;
 });
+
+/*
+    Ahorcado
+*/
+
+var animals = ["elefante", "tigre", "jirafa", "cocodrilo", "pinguino", "leopardo", "rinoceronte", "hipopotamo"];
+var selectedWord = animals[Math.floor(Math.random() * animals.length)];
+var guessedWord = new Array(selectedWord.length).fill("_");
+var attemptsLeft = 3;
+
+var wordElement = document.getElementById("word");
+var guessInput = document.getElementById("guess");
+var messageElement = document.getElementById("message");
+
+wordElement.textContent = guessedWord.join(" ");
+
+function guessLetter() {
+  var letter = guessInput.value.toLowerCase();
+
+  if (!letter.match(/[a-z]/)) {
+    messageElement.textContent = "Ingrese solo letras de la A a la Z.";
+    return;
+  }
+
+  if (letter.length !== 1) {
+    messageElement.textContent = "Ingrese solo una letra a la vez.";
+    return;
+  }
+
+  if (guessedWord.includes(letter)) {
+    messageElement.textContent = "Ya has adivinado esa letra. Intenta con otra.";
+    return;
+  }
+
+  var found = false;
+
+  for (var i = 0; i < selectedWord.length; i++) {
+    if (selectedWord[i] === letter) {
+      guessedWord[i] = letter;
+      found = true;
+    }
+  }
+
+  wordElement.textContent = guessedWord.join(" ");
+
+  if (found) {
+    messageElement.textContent = "¡Adivinaste una letra!";
+  } else {
+    attemptsLeft--;
+
+    if (attemptsLeft === 0) {
+      messageElement.textContent = "¡Perdiste! La palabra era: " + selectedWord;
+      guessInput.disabled = true;
+    } else {
+      messageElement.textContent = "Letra incorrecta. Te quedan " + attemptsLeft + " intentos.";
+    }
+  }
+
+  guessInput.value = "";
+}
