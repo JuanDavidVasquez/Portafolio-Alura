@@ -143,3 +143,12 @@ function guessLetter() {
 
   guessInput.value = "";
 }
+
+
+/*
+    Formulario
+*/
+
+function enViarFormulario(){
+
+}
