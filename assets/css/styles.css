@@ -173,6 +173,7 @@ nav{
 */
 .formacion{
     padding: 5rem;
+    margin: 5rem 0rem;
 }
 .container-cards{
     display: flex;
@@ -199,6 +200,77 @@ nav{
     font-size: 1.4rem;
 }
 
+/*
+    Experiencia profecional
+*/
+.profecional{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.encriptador{
+    padding: 4rem;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 20% 70%;
+    place-items: center;
+}
+.encriptador h1{
+    grid-column: 1/4;
+}
+.encriptador form{
+    grid-column: 1/4;
+    display: grid;
+}
+.dencriptador{
+    grid-column: 2/4;
+    padding: 4rem;
+}
+.botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+input{
+    width: 225px;
+    background: #4c6e97;
+    color: #ddd;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    font-size: calc(1.2rem + 1vw);
+    margin: 1rem;
+    cursor: pointer;
+}
+.accione,.acciones,.copiar{
+    background: #EB4521;
+    color: #fff;
+    width: 11rem;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all .5s ease-out;
+}
+.accione:hover,.acciones:hover,.copiar:hover{
+    filter: drop-shadow(2px 4px 6px black);
+}
+#resultado{
+    display: flex;
+    text-align: center;
+    min-height: 50vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: cursive;
+    word-wrap: break-word;
+    padding: 2rem;
+}
+
+/*
+    @medias
+*/
 @media screen and (min-width:1700px) {
     html{
         --header1:3rem;
